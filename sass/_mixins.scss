@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+@mixin button {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    span {
+        color: white;
+        font-family: $primary-font;
+        font-size: 20px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: $black;
+        letter-spacing: 3.64px;
+        font-weight: 800;
+    }
+
+    img {
+        background-color: $gold;
+        padding: 23px;
+    }
+}
+
+@mixin button-hover {
+    span {
+        background-color: $gold;
+    }
+
+    img {
+        background-color: $black;
+    }
+}
+
+@mixin breakpoint($bp) {
+    @if $bp == tablet {
+      @media (min-width: $bp-tablet) {
+        @content;
+      }
+    }
+  
+    @if $bp == desktop {
+      @media (min-width: $bp-desktop) {
+        @content;
+      }
+    }
+  }

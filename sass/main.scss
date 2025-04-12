@@ -1,0 +1,11 @@
+@use 'header';
+@use 'section';
+@use 'footer';
+@use 'footer-location';
+@use 'location';
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}

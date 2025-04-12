@@ -1,0 +1,232 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.container-day-gallery {
+    margin-left: 16px;
+    width: calc(100% - 16px);
+
+    @include breakpoint(tablet) {
+        margin-right: 40px;
+        margin-left: 40px;
+        width: calc(100% - 80px);
+    }
+
+    .container-your-day {
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: 11px;
+        }
+
+        @include breakpoint(desktop) {
+            justify-content: center;
+            gap: 125px;
+            margin-left: 140px;
+            margin-right: 130px;
+        }
+        .img-home02-mobile {
+            width: 96%;
+            margin-bottom: -15px;
+    
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+    
+        .img-home02-tablet {
+            display: none;
+    
+            @include breakpoint(tablet) {
+                display: inline-block;
+                width: 398px;
+            }
+
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+    
+        .img-home02-desktop {
+            display: none;
+
+            @include breakpoint(desktop) {
+                display: block;
+            }
+        }
+
+        h1.title-your-day {
+            font-family: $primary-font;
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 50px;
+            color: $black;
+
+            @include breakpoint(tablet){
+                width: 223px;
+            }
+        }
+    
+        p.description-your-day {
+            font-family: $secondary-font;
+            font-size: 18px;
+            font-weight: 300;
+            color: $grey;
+            width: 343px;
+            line-height: 28px;
+            margin-bottom: 32px;
+
+            @include breakpoint(tablet){
+                width: 70%;
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .grid-come-inspired {
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-direction: row;
+            gap: 11px;
+        }
+
+        @include breakpoint(desktop) {
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .second-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-home03-mobile {
+            width: 382px;
+            margin-bottom: 16px;
+
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+
+        .img-home04-mobile {
+            width: 382px;
+            margin-bottom: 16px;
+
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+
+        .img-home03-tablet {
+            display: none;
+
+            @include breakpoint(tablet) {
+                display: block;
+                width: 398px;
+                height: 720px;
+                object-fit: cover;
+            }
+
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+
+        .img-home03-desktop {
+            display: none;
+
+            @include breakpoint(desktop) {
+                display: block;
+                width: 635px;
+                height: 720px;
+                object-fit: cover;
+            }
+        }
+    
+        .img-home04-tablet {
+            display: none;
+
+            @include breakpoint(tablet) {
+                display: block;
+                width: 280px;
+                height: 313px;
+                object-fit: cover;
+            }
+
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+
+        .img-home04-desktop {
+            display: none;
+
+            @include breakpoint(desktop) {
+                display: block;
+                width: 455px;
+                height: 313px;
+                object-fit: cover;
+            }
+        }
+
+        .second-column {
+            @include breakpoint(tablet) {
+                gap: 11px;
+            }
+        }
+    
+        .container-come {
+            background-color: $black;
+            padding: 15px 30px;
+            margin-right: 16px;
+            margin-bottom: 120px;
+
+            @include breakpoint(tablet) {
+                padding-top: 40px;
+                padding-left: 29px;
+                padding-bottom: 130px;
+                padding-right: 28px;
+                width: 223px;
+                height: 226px;
+            }
+
+            @include breakpoint(desktop){
+                padding-top: 55px;
+                padding-left: 48px;
+                padding-bottom: 92px;
+                padding-right: 47px;
+                width: 360px;
+                height: 248px;
+            }
+    
+            h1.title-come {
+                color: $white;
+                line-height: 45px;
+                font-family: $primary-font;
+                font-weight: 900;
+                font-size: 50px;
+            }
+    
+            p.description-come {
+                color: $white;
+                width: 295px;
+                font-family: $secondary-font;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 28px;
+
+                @include breakpoint(tablet) {
+                    width: 223px;
+                    height: 112px;
+                }
+
+                @include breakpoint(desktop) {
+                    width: 350px;
+                    height: 96px;
+                }
+            }
+        }
+    }
+}

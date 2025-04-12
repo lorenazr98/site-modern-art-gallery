@@ -1,0 +1,130 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+header {
+    position: relative;
+    display: inline-block;
+
+    @include breakpoint(desktop) {
+        display: flex;
+    }
+
+    .container-black {
+        @include breakpoint(desktop) {
+            width: 450px;
+            height: 700px;
+            background-color: $black;
+        }
+    }
+
+    .img-home01-mobile {
+        margin-left: 0;
+        width: 110%;
+
+        @include breakpoint(tablet) {
+            display: none;
+        }
+
+        @include breakpoint(desktop) {
+            display: none;
+        }
+    }
+
+    .img-home01-tablet {
+        display: none;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            display: block;
+            width: 437px;
+            height: 700px;
+            margin-bottom: 120px;
+        }
+
+        @include breakpoint(desktop) {
+            display: none;
+        }
+    }
+
+    .img-home01-desktop {
+        display: none;
+        width: 100%;
+
+        @include breakpoint(desktop) {
+            display: block;
+            width: 437px;
+            height: 700px;
+            margin-bottom: 120px;
+        }
+    }
+
+    .container-hero {
+
+        @include breakpoint(tablet) {
+            position: absolute;
+            top: 145px;
+            left: 370px;
+        }
+
+        .logo {
+            margin-left: 16px;
+            width: 343px;
+            margin-top: 32px;
+            margin-bottom: 20px;
+
+            @include breakpoint(desktop) {
+                display: none;
+            }
+    
+        }
+
+        .logo-white {
+            display: none;
+
+            @include breakpoint(desktop) {
+                display: block;
+                width: 514px;
+                position: absolute;
+                right: 80px;
+                top: 20px;
+            }
+        }
+    
+        p {
+            margin-left: 16px;
+            font-family: $secondary-font;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 32px;
+            width: 343px;
+            color: $grey;
+            line-height: 28px;
+
+            @include breakpoint(desktop) {
+                position: absolute;
+                left: 450px;
+            }
+        }
+    
+        a {
+            text-decoration: none;
+            @include button;
+            margin-left: 16px;
+            margin-bottom: 120px;
+
+            @include breakpoint(desktop) {
+                position: relative;
+                left: 450px;
+                top: 200px;
+            }
+    
+            &:hover {
+                margin-left: 16px;
+                @include button-hover;
+            }
+        }
+
+    }
+
+    
+}

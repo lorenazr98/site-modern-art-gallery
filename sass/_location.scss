@@ -1,0 +1,134 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.location {
+    .container-map {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 607.19px;
+
+        @include breakpoint(tablet) {
+            height: 100%;
+        }
+
+        .button-back-home {
+            position: absolute;
+            z-index: 10;
+            text-decoration: none;
+            @include button;
+
+            @include breakpoint(desktop) {
+                left: 156px;
+            }
+        
+            &:hover {
+                @include button-hover;
+
+                @include breakpoint(desktop) {
+                    left: 156px;
+                }
+            }
+        }
+
+        .map-image-mobile {
+            width: 100%;
+
+            @include breakpoint(tablet) {
+                display: none;
+            }
+        }
+
+        .map-image-tablet {
+            display: none;
+
+            @include breakpoint (tablet) {
+                display: block;
+            }
+
+            @include breakpoint(desktop) {
+                display: none;
+            }
+        }
+
+        .map-image-desktop {
+            display: none;
+
+            @include breakpoint(desktop) {
+                display: block;
+            }
+        }
+
+    }
+    
+    .container-our-location {
+        background-color: $black;
+        padding-top: 5px;
+        padding-bottom: 25px;
+
+        @include breakpoint(tablet) {
+            display: grid;
+            grid-template-columns: 1fr, 2fr;
+            grid-template-rows: repeat(2, 1fr);
+            padding-top: 50px;
+            padding-bottom: 0;
+
+        }
+
+        @include breakpoint(desktop) {
+            padding-left: 80px;
+        }
+        
+        h1.title-location {
+            font-family: $primary-font;
+            font-size: 50px;
+            line-height: 45px;
+            font-weight: 800;
+            color: $white;
+            margin-left: 16px;
+            margin-bottom: 48px;
+
+            @include breakpoint(tablet) {
+                width: 223px;
+                margin-top: 88px;
+                margin-left: 39px;
+                grid-area: 1 / 1 / 2 / 2;
+            }
+        }
+
+        .container-adress {
+
+            @include breakpoint(tablet) {
+                grid-area: 1 / 2 / 4 / 3;
+            }
+
+            h2 {
+                color: $gold;
+                font-family: $primary-font;
+                font-size: 32px;
+                line-height: 32px;
+                font-size: 900;
+                margin-left: 16px;
+                margin-bottom: 20px;
+            }
+    
+            p {
+                color: $white;
+                font-family: $secondary-font;
+                line-height: 32px;
+                font-size: 18px;
+                font-weight: 300;
+                margin-left: 16px;
+                width: 343px;
+
+                @include breakpoint(desktop) {
+                    width: 540px;
+                }
+            }
+        }
+
+        
+    }
+
+}

@@ -1,0 +1,44 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer-home {
+    background-color: $black;
+    padding-top: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 20px;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(desktop) {
+        justify-content: center;
+        gap: 200px;
+    }
+
+    .img-logo {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: $secondary-font;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+        color: $white;
+        margin-bottom: 38px;
+        width: 311px;
+
+        @include breakpoint(tablet) {
+            margin-top: 0;
+        }
+    }
+
+    .icons-rrss {
+        display: flex;
+        gap: 20px;
+    }
+}
